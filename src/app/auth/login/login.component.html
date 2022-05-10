@@ -1,6 +1,6 @@
 
 
-<form fxLayout="column" fxLayoutAlign="center center">
+<form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #Login_data="ngForm" (ngSubmit)="onLoginsubmit(Login_data)">
     <h1>login Page!</h1>
         <mat-form-field>
             <input type="email" 
@@ -8,14 +8,25 @@
             required 
             ngModel 
             name="emali" 
-            placeholder="Email">
+            placeholder="Email"
+            #emailInput='ngModel'
+            />
+                <mat-error *ngIf="emailInput.hasError('required')">please enter email</mat-error>
+                <mat-error *ngIf="!emailInput.hasError('required')">Email is not valid</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input type="password" 
+            <input 
+            type="password" 
             matInput 
-            required 
-            ngmodel 
-            name="password" 
-            placeholder="Password" >
+            placeholder="Your password" 
+            ngModel  
+            name="Password"
+            password
+            required
+            #pwLength="ngModel"
+             />
+             <mat-hint align="end">{{pwLength.value?.length}} /6</mat-hint>
+             <mat-error *ngIf="pwLength.hasError('required')">please Enter password</mat-error>
         </mat-form-field>
+        <button type="submit" mat-raised-button color="primary" [disabled]="Login_data.invalid">Submit</button>
 </form>
