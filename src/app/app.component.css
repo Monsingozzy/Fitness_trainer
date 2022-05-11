@@ -3,7 +3,6 @@ mat-sidenav-container,mat-sidenav-content,mat-sidenav{
 }
 mat-sidenav{
     width: 250px;
- 
 }
 a{
     text-decoration: none;
@@ -12,5 +11,9 @@ a{
 a:hover,
 a:active {
     color:aqua
+}
+.nav-caption{
+
+    padding-left: 10px;
 }
 
