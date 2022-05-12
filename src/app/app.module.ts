@@ -1,3 +1,4 @@
+import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './amterial.module';
 import { RouterModule } from '@angular/router';
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
+import {MatDialogModule } from '@angular/material/dialog';
 
 
 import { SignupComponent } from './auth/signup/signup.component';
@@ -36,7 +37,9 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
-   
+    StopTrainingComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -46,9 +49,11 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     RouterModule,
     MaterialModule,
     FlexLayoutModule,
-    
+
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[StopTrainingComponent]
 })
 export class AppModule { }
