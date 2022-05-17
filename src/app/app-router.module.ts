@@ -8,7 +8,7 @@ import { NgModule } from "@angular/core";
 import {RouterModule, Routes } from "@angular/router";
 
 const route:Routes=[
-    { path:"my-first-angular-app",component:WelcomeComponent },
+    { path:"",component:WelcomeComponent },
     { path:"signup",component:SignupComponent },
     { path:"login",component:LoginComponent },
     {path:"training",component:TrainingComponent}
