@@ -12,7 +12,6 @@
                 #emailInput='ngModel'/>
                 <mat-error *ngIf="emailInput.hasError('required')">please enter email</mat-error>
                 <mat-error *ngIf="!emailInput.hasError('required')">Email is not valid</mat-error>
-
         </mat-form-field>
 
         <mat-form-field hintLabel="At Least 6 Charecters Long.">
@@ -28,7 +27,6 @@
                  />
                  <mat-hint align="end">{{pwLength.value?.length}} /6</mat-hint>
                  <mat-error *ngIf="pwLength.hasError('required')">please Enter password</mat-error>
-
         </mat-form-field>
         <mat-form-field>
             <input [max]="maxdate" matInput [matDatepicker]="picker" ngModel name="birthdate" required placeholder="Your Birthdate">
@@ -36,6 +34,5 @@
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
         <mat-checkbox ngModel name="agree" required color="primary">agree to terms and condition</mat-checkbox>
-        <button type="submit" mat-raised-button color="primary" [disabled]="form_data.invalid">Submit</button>
-       
+        <button type="submit" mat-raised-button color="primary" [disabled]="form_data.invalid">Submit</button>    
 </form>
