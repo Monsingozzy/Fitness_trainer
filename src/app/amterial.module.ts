@@ -34,8 +34,6 @@ import {MatDialogModule} from '@angular/material/dialog';
              MatSelectModule,
              MatProgressSpinnerModule,
              MatDialogModule
-
-
             ],
     exports:[MatSliderModule,
              MatButtonModule,
@@ -54,8 +52,5 @@ import {MatDialogModule} from '@angular/material/dialog';
              MatProgressSpinnerModule,
              MatDialogModule,
             ]
-
 })
-
-
 export class MaterialModule{}
