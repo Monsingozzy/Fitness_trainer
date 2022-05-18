@@ -16,9 +16,7 @@ maxdate: Date;
     this.maxdate=new Date();
     this.maxdate.setFullYear(this.maxdate.getFullYear()-18)
   }
-
-  onsubmit(form:NgForm){
-    console.log(form.value.Username);
-  }
-
+//   onsubmit(form:NgForm){
+//     console.log(form.value.Username);
+//   }
 }
