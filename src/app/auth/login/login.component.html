@@ -1,5 +1,3 @@
-
-
 <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #Login_data="ngForm" (ngSubmit)="onLoginsubmit(Login_data)">
     <h1>login !</h1>
         <mat-form-field>
@@ -11,8 +9,8 @@
             placeholder="Email"
             #emailInput='ngModel'
             />
-                <mat-error *ngIf="emailInput.hasError('required')">please enter email</mat-error>
-                <mat-error *ngIf="!emailInput.hasError('required')">Email is not valid</mat-error>
+            <mat-error *ngIf="emailInput.hasError('required')">please enter email</mat-error>
+            <mat-error *ngIf="!emailInput.hasError('required')">Email is not valid</mat-error>
         </mat-form-field>
         <mat-form-field>
             <input 
