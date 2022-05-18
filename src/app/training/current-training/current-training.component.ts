@@ -22,7 +22,6 @@ export class CurrentTrainingComponent implements OnInit {
 
     // },1000)
     this.Starttimer();
-
   }
   Starttimer(){
     this.timer=setInterval(()=>{
@@ -30,7 +29,6 @@ export class CurrentTrainingComponent implements OnInit {
       if(this.process>=100){
         clearInterval(this.timer)
       }
-
     },1000)
   }
   Stoptimer(){
@@ -39,17 +37,13 @@ export class CurrentTrainingComponent implements OnInit {
       data:{
       process:this.process
       }
-
     });
     dailogRef.afterClosed().subscribe(result=>{
       if(result){
         this.TrainingStop.emit();
       }else{
-
         this.Starttimer();
       }
-      });
+    });
   }
-
-
 }
