@@ -8,11 +8,9 @@ import { Component, OnInit,EventEmitter,Output } from '@angular/core';
 export class NewTrainingComponent implements OnInit {
 @Output() trainingstarted=new EventEmitter<void>();
   constructor() { }
-
   ngOnInit(): void {
   }
   onStartTraining(){
     this.trainingstarted.emit();
   }
-
 }
